@@ -20,6 +20,7 @@ class LayoutComponent extends Component {
 
   state: Object = {
     imgSrc: '',
+    imgName: '',
     dragEnter: false,
     uploadHighlighted: this.props.config.uploadEnabled && !!this.props.config.uploadCallback,
     showImageLoading: false,
@@ -32,6 +33,7 @@ class LayoutComponent extends Component {
     if (this.props.expanded && !props.expanded) {
       this.setState({
         imgSrc: '',
+        imgName: '',
         dragEnter: false,
         uploadHighlighted: this.props.config.uploadEnabled && !!this.props.config.uploadCallback,
         showImageLoading: false,
@@ -126,6 +128,7 @@ class LayoutComponent extends Component {
           showImageLoading: false,
           dragEnter: false,
           imgSrc: data.link,
+          imgName: data.name,
         });
         this.fileUpload = false;
       }).catch(() => {
@@ -153,6 +156,7 @@ class LayoutComponent extends Component {
   renderAddImageModal(): Object {
     const {
       imgSrc,
+      imgName,
       uploadHighlighted,
       showImageLoading,
       dragEnter,
@@ -220,7 +224,7 @@ class LayoutComponent extends Component {
                   htmlFor="file"
                   className="rdw-image-modal-upload-option-label"
                 >
-                  {imgSrc || translations['components.controls.image.dropFileText']}
+                  {imgName || translations['components.controls.image.dropFileText']}
                 </label>
               </div>
               <input
