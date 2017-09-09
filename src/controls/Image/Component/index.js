@@ -131,6 +131,7 @@ class LayoutComponent extends Component {
           imgName: data.name,
         });
         this.fileUpload = false;
+        this.addImageFromState();
       }).catch(() => {
         this.setState({
           showImageLoading: false,
