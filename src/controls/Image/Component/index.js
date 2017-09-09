@@ -136,6 +136,7 @@ class LayoutComponent extends Component {
           showImageLoading: false,
           dragEnter: false,
         });
+      }).then(() => {
         this.addImageFromState();
       });
   };
