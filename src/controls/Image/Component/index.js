@@ -184,6 +184,8 @@ class LayoutComponent extends Component {
         onClick={this.stopPropagation}
       >
         <div className="rdw-image-modal-header">
+          图片不得超过1M
+          {/*
           {uploadEnabled && uploadCallback &&
             <span
               onClick={this.showImageUploadOption}
@@ -197,6 +199,7 @@ class LayoutComponent extends Component {
                 )}
               />
             </span>}
+          */}
           { urlEnabled &&
             <span
               onClick={this.showImageURLOption}
