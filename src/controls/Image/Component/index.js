@@ -184,7 +184,6 @@ class LayoutComponent extends Component {
         onClick={this.stopPropagation}
       >
         <div className="rdw-image-modal-header">
-          图片不得超过1M
           {/*
           {uploadEnabled && uploadCallback &&
             <span
@@ -213,6 +212,7 @@ class LayoutComponent extends Component {
                 )}
               />
             </span>}
+          
         </div>
         {
           uploadHighlighted ?
@@ -252,6 +252,7 @@ class LayoutComponent extends Component {
               <span className="rdw-image-mandatory-sign">*</span>
             </div>
         }
+        <span className="rdw-image-modal-notation">*图片最大不能超过1M</span>
         {altConf.present &&
         <div className="rdw-image-modal-size">
           <span className="rdw-image-modal-alt-lbl">Alt Text</span>

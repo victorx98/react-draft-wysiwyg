@@ -564,6 +564,10 @@
   align-items: center;
   flex-direction: column;
 }
+.rdw-image-modal-notation {
+  font-size: 13px;
+  color: grey;
+}
 .rdw-image-modal-header-label {
   width: 80px;
   background: #f1f1f1;
